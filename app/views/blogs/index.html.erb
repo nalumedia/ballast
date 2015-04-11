@@ -1,0 +1,19 @@
+
+<%= link_to 'New Blog', new_blog_path %>
+
+
+    <% @blogs.each do |blog| %>
+        <h3><%= blog.blog_title %></h3>
+
+          <%= image_tag blog.image.url(:medium) %>
+       <p> <%= blog.blog_body %></p>
+        <% if user_signed_in? %>
+        <%= link_to 'Show', blog %> |
+        <%= link_to 'Edit', edit_blog_path(blog) %> |
+        <%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+    
+    <% end %>
+
+
+
