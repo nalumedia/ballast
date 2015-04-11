@@ -1,0 +1,66 @@
+@import "bootstrap-sprockets";
+@import 'bootstrap';
+
+
+/* Import the fonts */
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: font-url('glyphicons-halflings-regular.eot');
+  src: font-url('glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
+       font-url('glyphicons-halflings-regular.woff') format('woff'),
+       font-url('glyphicons-halflings-regular.ttf') format('truetype'),
+       font-url('glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+
+
+
+body {
+	font-family: 'Inconsolata';
+	font-size: 18px;
+	padding-top: 20px;
+}
+
+
+
+
+a:link {
+	color: #000000;
+}
+
+a:visited {
+	color: #000000;
+}
+
+a:hover {
+		color: #C3113B;
+		text-decoration: none;
+		transition: color 0.3s ease-in;
+
+	}
+
+	#headernav {
+		padding-top: 20px;
+		font-size: 22px;
+	}
+		#main {
+		padding-top: 20px;
+		font-size: 22px;
+	}
+
+#logobottom {
+	padding-top: 10px;
+}
+
+#footernav {
+padding-top: 10px; 
+font-size: 10px;
+color: #7f8c8d;
+
+}
+
+#footer {
+padding-top: 10px; 
+font-size: 10px;
+color: #7f8c8d;
+
+}

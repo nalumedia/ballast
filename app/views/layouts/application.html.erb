@@ -5,11 +5,79 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+<div class="row">
+<div class="col-md-4"></div><!-- end md 4 -->
+<div class="col-md-4">
+  <%= link_to image_tag("https://s3.amazonaws.com/ballast/images/ballastlogo.png"), root_path %>
+  <br />
+</div><!-- end md 4 -->
+<div class="col-md-4"></div><!-- end md 4 -->
+</div><!-- end row -->
+
+<div class="row">
+<div class="col-md-12 text-center" id="headernav">
+
+<% if user_signed_in? %>  
+<%= link_to "HARWARE", '#' %> | <%= link_to "BLOG", '#' %> | <%= link_to "MEDIA", '#' %>
+<% else %>
+Not logged in
+<% end %>
+
+
+</div><!-- end md 4 -->
+</div><!-- end row -->
+
+<div class="row">
+  <div class="col-md-2"></div><!-- end md 4 -->
+<div class="col-md-8" id="main">
+
+<!-- end header -->
 
 <%= yield %>
+
+<!-- begin footer -->
+
+</div><!-- end md 4 -->
+<div class="col-md-2"></div><!-- end md 4 -->
+</div><!-- end row -->
+
+
+<div class="row">
+<div class="col-md-12 text-center" id="logobottom">
+<img src="https://s3.amazonaws.com/ballast/images/ballast_a.png">
+</div><!-- end md 4 -->
+
+</div><!-- end row -->
+
+<div class="row">
+<div class="col-md-4"></div><!-- end md 4 -->
+<div class="col-md-4 text-center" id="footernav">
+   <% if user_signed_in? %>
+<%= link_to destroy_user_session_path, method: :delete do %>
+&nbsp;  LOGOUT   &nbsp; 
+                             <% end %>
+<% else %>
+<%=  link_to new_user_session_path do %>
+&nbsp; LOGIN <% end %> &nbsp; 
+<% end %>
+|
+  <%= link_to "CONTACT", new_contact_path %>
+</div><!-- end md 4 -->
+<div class="col-md-4"></div><!-- end md 4 -->
+</div><!-- end row -->
+
+<div class="row">
+<div class="col-md-4"></div><!-- end md 4 -->
+<div class="col-md-4 text-center" id="footer">
+&copy; 2015 Ballast Hardware
+</div><!-- end md 4 -->
+<div class="col-md-4"></div><!-- end md 4 -->
+</div><!-- end row -->
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
