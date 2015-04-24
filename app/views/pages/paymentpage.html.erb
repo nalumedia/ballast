@@ -5,7 +5,7 @@
     <%= hidden_field_tag 'stripeToken' %>
     <%= hidden_field_tag 'stripeEmail' %>  
     <%= hidden_field_tag 'amount', 6000  %> 
-    <button id="btn-buy" type="button" class="btn btn-success btn-lg btn-block"><span class="glyphicon glyphicon-ok"></span> &nbsp;Purchase Item</button>
+    <button id="btn-buy" type="button" class="btn btn-default btn-lg btn-block"><i class="fa fa-credit-card"></i>&nbsp;Purchase Item</button>
     <script>
     var handler = StripeCheckout.configure({
       key: '<%= Rails.configuration.stripe[:publishable_key] %>',

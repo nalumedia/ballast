@@ -9,7 +9,7 @@ class PurchasesController < ApplicationController
   end
 
   def show
-    @purchase = Purchase.find(params[:id])
+    @purchase = Purchase.find_by_uuid(params[:id])
     respond_with(@purchase)
   end
 
@@ -39,7 +39,7 @@ class PurchasesController < ApplicationController
 
   private
     def set_purchase
-      @purchase = Purchase.find(params[:id])
+      @purchase = Purchase.find_by_uuid(params[:id])
     end
 
     def purchase_params
