@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150411211721) do
+ActiveRecord::Schema.define(version: 20150424192350) do
 
   create_table "blogs", force: true do |t|
     t.string   "blog_title"
@@ -30,6 +30,18 @@ ActiveRecord::Schema.define(version: 20150411211721) do
     t.string   "contact_email"
     t.text     "contact_description"
     t.string   "contact_status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "purchases", force: true do |t|
+    t.string   "email"
+    t.integer  "amount"
+    t.string   "description"
+    t.string   "currency"
+    t.string   "customer_id"
+    t.string   "card"
+    t.integer  "product_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

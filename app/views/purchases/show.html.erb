@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @purchase.email %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @purchase.amount %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @purchase.description %>
+</p>
+
+<p>
+  <strong>Currency:</strong>
+  <%= @purchase.currency %>
+</p>
+
+<p>
+  <strong>Customer:</strong>
+  <%= @purchase.customer_id %>
+</p>
+
+<p>
+  <strong>Card:</strong>
+  <%= @purchase.card %>
+</p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @purchase.product_id %>
+</p>
+
+<p>This is your purchase</p>
+<p>Your purchase is <%= @purchase.inspect %></p>
+
+<%= link_to 'Edit', edit_purchase_path(@purchase) %> |
+<%= link_to 'Back', purchases_path %>
