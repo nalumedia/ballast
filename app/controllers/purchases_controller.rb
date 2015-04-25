@@ -43,6 +43,6 @@ class PurchasesController < ApplicationController
     end
 
     def purchase_params
-      params.require(:purchase).permit(:email, :amount, :description, :currency, :customer_id, :card, :product_id)
+      params.require(:purchase).permit(:email, :amount, :description, :currency, :customer_id, :card, :product_id, :status)
     end
 end

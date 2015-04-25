@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :delivertos
+
   resources :purchases
 
   resources :blogs

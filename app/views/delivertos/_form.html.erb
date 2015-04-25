@@ -1,16 +1,3 @@
-<div class="row">
-<div class="col-md-12 text-center" id="red">
-<h3>THANK YOU FOR YOUR ORDER</h3>
-</div><!-- end md 4 -->
-</div><!-- end row -->
-
-<p>
-Your order of: <strong><%= @purchase.description %></strong> has been received. </p>
-<p>You card has been charged <strong><%= @purchase.amount %></strong></p>
-
-<h3>Where do you want it delivered?</h3>
-
-<% @deliverto = Deliverto.new %>
 <%= form_for(@deliverto) do |f| %>
   <% if @deliverto.errors.any? %>
     <div id="error_explanation">
@@ -44,12 +31,10 @@ Your order of: <strong><%= @purchase.description %></strong> has been received. 
     <%= f.label :deliverto_country %><br>
     <%= f.text_field :deliverto_country %>
   </div>
-
-  <div class="form-group">
-  <%= f.hidden_field :purchase_id, :value => @purchase.id %>
+  <div class="field">
+    <%= f.label :purchase_id %><br>
+    <%= f.number_field :purchase_id %>
   </div>
-
-
   <div class="field">
     <%= f.label :deliverto_instructions %><br>
     <%= f.text_area :deliverto_instructions %>
@@ -58,16 +43,3 @@ Your order of: <strong><%= @purchase.description %></strong> has been received. 
     <%= f.submit %>
   </div>
 <% end %>
-
-
-
-
-
-<!-- internal --> 
-<hr /> 
-
-<p>This is your purchase</p>
-<p>Your purchase is <%= @purchase.inspect %></p>
-
-<%= link_to 'Edit', edit_purchase_path(@purchase) %> |
-<%= link_to 'Back', purchases_path %>

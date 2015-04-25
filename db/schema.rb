@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150424193951) do
+ActiveRecord::Schema.define(version: 20150425211328) do
 
   create_table "blogs", force: true do |t|
     t.string   "blog_title"
@@ -34,6 +34,18 @@ ActiveRecord::Schema.define(version: 20150424193951) do
     t.datetime "updated_at"
   end
 
+  create_table "delivertos", force: true do |t|
+    t.string   "deliverto_street"
+    t.string   "deliverto_city"
+    t.string   "delivertto_state"
+    t.string   "deliverto_zip"
+    t.string   "deliverto_country"
+    t.integer  "purchase_id"
+    t.text     "deliverto_instructions"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "purchases", force: true do |t|
     t.string   "email"
     t.integer  "amount"
@@ -45,6 +57,7 @@ ActiveRecord::Schema.define(version: 20150424193951) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "uuid"
+    t.string   "status"
   end
 
   create_table "users", force: true do |t|

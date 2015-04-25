@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  deliverto_street: MyString
+  deliverto_city: MyString
+  delivertto_state: MyString
+  deliverto_zip: MyString
+  deliverto_country: MyString
+  purchase_id: 1
+  deliverto_instructions: MyText
+
+two:
+  deliverto_street: MyString
+  deliverto_city: MyString
+  delivertto_state: MyString
+  deliverto_zip: MyString
+  deliverto_country: MyString
+  purchase_id: 1
+  deliverto_instructions: MyText

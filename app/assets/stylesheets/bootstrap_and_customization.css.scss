@@ -12,16 +12,11 @@
        font-url('glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 
-
-
 body {
 	font-family: 'Inconsolata';
 	font-size: 18px;
 	padding-top: 20px;
 }
-
-
-
 
 a:link {
 	color: #000000;
@@ -48,19 +43,28 @@ a:hover {
 	}
 
 #logobottom {
-	padding-top: 10px;
+	padding-top: 20px;
 }
 
 #footernav {
-padding-top: 10px; 
+padding-top: 20px; 
 font-size: 10px;
 color: #7f8c8d;
 
 }
 
 #footer {
-padding-top: 10px; 
+padding-top: 20px; 
 font-size: 10px;
 color: #7f8c8d;
-
 }
+
+#red {
+	background-color: #D50017;
+	color: #FFFFFF; 
+}
+
+#tabledata {
+	font-size: 12px;
+}
+

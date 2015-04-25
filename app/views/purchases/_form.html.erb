@@ -11,35 +11,40 @@
     </div>
   <% end %>
 
-  <div class="field">
+   <div class="form-group">
     <%= f.label :email %><br>
-    <%= f.text_field :email %>
+    <%= f.text_field :email, class: "form-control" %>
   </div>
-  <div class="field">
+   <div class="form-group">
     <%= f.label :amount %><br>
-    <%= f.number_field :amount %>
+    <%= f.number_field :amount, class: "form-control" %>
   </div>
-  <div class="field">
+    <div class="form-group">
     <%= f.label :description %><br>
-    <%= f.text_field :description %>
+    <%= f.text_field :description, class: "form-control" %>
   </div>
-  <div class="field">
+   <div class="form-group">
     <%= f.label :currency %><br>
-    <%= f.text_field :currency %>
+    <%= f.text_field :currency, class: "form-control" %>
   </div>
-  <div class="field">
+    <div class="form-group">
     <%= f.label :customer_id %><br>
-    <%= f.text_field :customer_id %>
+    <%= f.text_field :customer_id, class: "form-control" %>
   </div>
-  <div class="field">
+    <div class="form-group">
     <%= f.label :card %><br>
-    <%= f.text_field :card %>
+    <%= f.text_field :card, class: "form-control" %>
   </div>
-  <div class="field">
+   <div class="form-group">
     <%= f.label :product_id %><br>
-    <%= f.number_field :product_id %>
+    <%= f.number_field :product_id, class: "form-control" %>
   </div>
+  <div class="form-group">
+  <%= f.label "Order Status" %><br>
+  <%= f.select "status", ['New', 'Packing', 'Shipped', 'Complete'] %>
+  </div>
+
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Update Order", class: "btn btn-default" %>
   </div>
 <% end %>
