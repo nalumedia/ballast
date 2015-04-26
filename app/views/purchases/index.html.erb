@@ -1,7 +1,6 @@
 <h1>Orders</h1>
-
 <div id="tabledata">
-<table class="table tabel-bordered table-striped table-hover">
+<table class="table table-bordered table-striped table-hover">
   <thead>
     <tr>
       <th>Date</th>
@@ -15,13 +14,14 @@
   <tbody>
     <% @purchases.each do |purchase| %>
       <tr>
-        <td><%= purchase.created_at.to_formatted_s(:short) %></td>
+        <td><%= purchase.created_at.to_formatted_s(:short) %><br />
+          ID: <%= purchase.id %></td>
         <td><%= purchase.amount %></td>
         <td><%= purchase.description %>, <%= purchase.product_id %></td>
         <td>
           <%= purchase.email %><br />
           <%= purchase.customer_id %><br />
-          <%= purchase.deliverto.deliverto_city %>
+          
           </td>
         <td><%= link_to 'View', purchase %>
         | <%= link_to 'Edit', edit_purchase_path(purchase) %>

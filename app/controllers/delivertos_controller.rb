@@ -42,6 +42,6 @@ class DelivertosController < ApplicationController
     end
 
     def deliverto_params
-      params.require(:deliverto).permit(:deliverto_street, :deliverto_city, :delivertto_state, :deliverto_zip, :deliverto_country, :purchase_id, :deliverto_instructions)
+      params.require(:deliverto).permit(:deliverto_street, :deliverto_status, :deliverto_city, :delivertto_state, :deliverto_zip, :deliverto_country, :purchase_id, :deliverto_instructions)
     end
 end

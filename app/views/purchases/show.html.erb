@@ -24,44 +24,56 @@ Your order of: <strong><%= @purchase.description %></strong> has been received. 
     </div>
   <% end %>
 
-  <div class="field">
+<div class="row">
+<div class="col-md-12">
+  <div class="form-group">
     <%= f.label :deliverto_street %><br>
-    <%= f.text_field :deliverto_street %>
+    <%= f.text_field :deliverto_street, class: "form-control" %>
   </div>
-  <div class="field">
+</div><!-- end md 4 -->
+</div><!-- end row -->
+
+<div class="row">
+<div class="col-md-4">
+ <div class="form-group">
     <%= f.label :deliverto_city %><br>
-    <%= f.text_field :deliverto_city %>
+    <%= f.text_field :deliverto_city, class: "form-control" %>
   </div>
-  <div class="field">
+  </div><!-- end md 4 -->
+<div class="col-md-4">
+<div class="form-group">
     <%= f.label :delivertto_state %><br>
-    <%= f.text_field :delivertto_state %>
+    <%= f.text_field :delivertto_state, class: "form-control" %>
   </div>
-  <div class="field">
+  </div><!-- end md 4 -->
+<div class="col-md-4">
+<div class="form-group">
     <%= f.label :deliverto_zip %><br>
-    <%= f.text_field :deliverto_zip %>
+    <%= f.text_field :deliverto_zip, class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :deliverto_country %><br>
-    <%= f.text_field :deliverto_country %>
+    <%= f.text_field :deliverto_country, class: "form-control" %>
   </div>
+  </div><!-- end md 4 -->
+</div><!-- end row -->
 
   <div class="form-group">
   <%= f.hidden_field :purchase_id, :value => @purchase.id %>
   </div>
 
-
-  <div class="field">
+  <div class="form-group">
     <%= f.label :deliverto_instructions %><br>
-    <%= f.text_area :deliverto_instructions %>
+    <%= f.text_area :deliverto_instructions, class: "form-control" %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Complete Order", class: "btn btn-danger" %>
   </div>
 <% end %>
 
 
 
-
+<% if user_signed_in? %>
 
 <!-- internal --> 
 <hr /> 
@@ -71,3 +83,5 @@ Your order of: <strong><%= @purchase.description %></strong> has been received. 
 
 <%= link_to 'Edit', edit_purchase_path(@purchase) %> |
 <%= link_to 'Back', purchases_path %>
+
+<% end %>

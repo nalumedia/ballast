@@ -28,6 +28,7 @@
 <div class="row">
       <div class="col-md-12 text-center" id="headernav">
       <% if user_signed_in? %>  
+      <%= link_to "ORDERS", delivertos_path %> |
       <%= link_to "HARWDARE", pages_paymentpage_path %> | <%= link_to "BLOG", blogs_path %> | <%= link_to "MEDIA", '#' %>
       <% else %>
       <!-- not logged in content -->

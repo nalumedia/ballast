@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150425211328) do
+ActiveRecord::Schema.define(version: 20150426213135) do
 
   create_table "blogs", force: true do |t|
     t.string   "blog_title"
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 20150425211328) do
     t.text     "deliverto_instructions"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "deliverto_status"
   end
 
   create_table "purchases", force: true do |t|

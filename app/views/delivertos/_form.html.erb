@@ -11,35 +11,40 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
+  <%= f.label "Order Status" %><br>
+  <%= f.select "deliverto_status", ['New', 'Packing', 'Shipped', 'Complete'], class: "form-control" %>
+  </div>
+
+  <div class="form-group">
     <%= f.label :deliverto_street %><br>
-    <%= f.text_field :deliverto_street %>
+    <%= f.text_field :deliverto_street, class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :deliverto_city %><br>
-    <%= f.text_field :deliverto_city %>
+    <%= f.text_field :deliverto_city, class: "form-control" %>
   </div>
-  <div class="field">
+   <div class="form-group">
     <%= f.label :delivertto_state %><br>
-    <%= f.text_field :delivertto_state %>
+    <%= f.text_field :delivertto_state, class: "form-control" %>
   </div>
-  <div class="field">
+    <div class="form-group">
     <%= f.label :deliverto_zip %><br>
-    <%= f.text_field :deliverto_zip %>
+    <%= f.text_field :deliverto_zip, class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :deliverto_country %><br>
-    <%= f.text_field :deliverto_country %>
+    <%= f.text_field :deliverto_country, class: "form-control" %>
   </div>
-  <div class="field">
+   <div class="form-group">
     <%= f.label :purchase_id %><br>
-    <%= f.number_field :purchase_id %>
+    <%= f.number_field :purchase_id, class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :deliverto_instructions %><br>
-    <%= f.text_area :deliverto_instructions %>
+    <%= f.text_area :deliverto_instructions, class: "form-control" %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Update Order", class: "btn btn-danger" %>
   </div>
 <% end %>

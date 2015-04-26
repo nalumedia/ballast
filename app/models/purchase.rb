@@ -1,5 +1,5 @@
 class Purchase < ActiveRecord::Base
-		has_one :deliverto
+		has_many :delivertos
 		def to_param
 	 	uuid
 		end
