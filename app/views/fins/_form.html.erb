@@ -33,6 +33,10 @@
   <div class="form-group">
     <%= f.text_field :ballast_price, class: "form-control", :placeholder => "Ballast Price" %>
   </div>
+  <div class="form-group">
+    <%= f.label :image %>
+    <%= f.file_field :image, class: "form-control" %>
+  </div>
   <div class="actions">
     <%= f.submit class: "btn btn-default" %>
   </div>

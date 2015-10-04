@@ -16,7 +16,10 @@
   <tbody>
     <% @fins.each do |fin| %>
       <tr>
-        <td><%= fin.name %> // <%= fin.model %></td>
+        <td><%= fin.name %> // <%= fin.model %><br/>
+          <%= link_to image_tag(fin.image.url(:thumb)), fin, class: "img-responsive" %>
+        
+        </td>
         <td><%= fin.base %></td>
         <td><%= fin.height %></td>
         <td><%= fin.description %></td>

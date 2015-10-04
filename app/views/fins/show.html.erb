@@ -1,11 +1,15 @@
 <p id="notice"><%= notice %></p>
 
+
+<p>
+  <strong>Base:</strong>
+  <%= image_tag @fin.image.url(:medium), class: "img-responsive" %>
+</p>
+
 <p>
   <strong>Name:</strong>
   <%= @fin.name %>
 </p>
-
-
 
 <p>
   <strong>Base:</strong>
