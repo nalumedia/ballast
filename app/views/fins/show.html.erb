@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @fin.name %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @fin.type %>
+</p>
+
+<p>
+  <strong>Base:</strong>
+  <%= @fin.base %>
+</p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @fin.height %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @fin.description %>
+</p>
+
+<p>
+  <strong>Customer price:</strong>
+  <%= @fin.customer_price %>
+</p>
+
+<p>
+  <strong>Ballast price:</strong>
+  <%= @fin.ballast_price %>
+</p>
+
+<%= link_to 'Edit', edit_fin_path(@fin) %> |
+<%= link_to 'Back', fins_path %>

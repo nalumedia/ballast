@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :fins
+
   resources :delivertos
 
   resources :purchases
@@ -12,6 +14,7 @@ Rails.application.routes.draw do
   get 'pages/home'
   get 'pages/paymentpage'
   root 'pages#home'
+  get "about" => "pages#about" #about_path
 
 
   # The priority is based upon order of creation: first created -> highest priority.

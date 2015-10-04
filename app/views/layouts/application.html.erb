@@ -31,7 +31,8 @@
       <div class="col-md-12 text-center" id="headernav">
       <% if user_signed_in? %>  
       <%= link_to "ORDERS", delivertos_path %> |
-      <%= link_to "HARWDARE", pages_paymentpage_path %> | <%= link_to "BLOG", blogs_path %> | <%= link_to "MEDIA", '#' %>
+      <%= link_to "HARWDARE", pages_paymentpage_path %> | <%= link_to "BLOG", blogs_path %> | <%= link_to "MEDIA", '#' %> | <%= link_to "FINS", fins_path %>
+
       <% else %>
       <!-- not logged in content -->
       <% end %>
@@ -71,7 +72,10 @@
       <% end %> &nbsp; 
       <% end %>
       |
+      <%= link_to "OUR STORY", about_path %>
+      |
       <%= link_to "CONTACT", new_contact_path %>
+ 
       </div><!-- end md 4 -->
       <div class="col-md-4"></div><!-- end md 4 -->
 </div><!-- end row -->

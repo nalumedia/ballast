@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  type: 
+  base: MyString
+  height: MyString
+  description: MyText
+  customer_price: 9.99
+  ballast_price: 9.99
+
+two:
+  name: MyString
+  type: 
+  base: MyString
+  height: MyString
+  description: MyText
+  customer_price: 9.99
+  ballast_price: 9.99

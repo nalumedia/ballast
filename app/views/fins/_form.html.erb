@@ -1,0 +1,38 @@
+<%= form_for(@fin) do |f| %>
+  <% if @fin.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@fin.errors.count, "error") %> prohibited this fin from being saved:</h2>
+
+      <ul>
+      <% @fin.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.text_field :name, class: "form-control", :placeholder => "Fin Name" %>
+  </div>
+  <div class="form-group">
+    <%= f.text_field :type, class: "form-control", :placeholder => "Fin Type" %>
+  </div>
+  <div class="form-group">
+    <%= f.text_field :base, class: "form-control", :placeholder => "Base" %>
+  </div>
+    <div class="form-group">
+    <%= f.text_field :height, class: "form-control", :placeholder => "Height" %>
+  </div>
+  <div class="form-group">
+    <%= f.text_area :description, class: "form-control", :placeholder => "Description" %>
+  </div>
+  <div class="form-group">
+    <%= f.text_field :customer_price, class: "form-control", :placeholder => "Customer Price" %>
+  </div>
+  <div class="form-group">
+    <%= f.text_field :ballast_price, class: "form-control", :placeholder => "Ballast Price" %>
+  </div>
+  <div class="actions">
+    <%= f.submit class: "btn btn-default" %>
+  </div>
+<% end %>
