@@ -1,38 +1,30 @@
-<h1>Listing fins</h1>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Base</th>
-      <th>Height</th>
-      <th>Description</th>
-      <th>Customer price</th>
-      <th>Ballast price</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
+<% if user_signed_in? %>
+<%= link_to new_fin_path do %><i class="fa fa-square-o"></i>&nbsp; ADD A NEW FIN <% end %> <br />
+<% end %>
+<div class="row">
+    <div class="col-md-12">
+<center>
     <% @fins.each do |fin| %>
-      <tr>
-        <td><%= fin.name %> // <%= fin.model %><br/>
-          <%= link_to image_tag(fin.image.url(:thumb)), fin, class: "img-responsive" %>
-        
-        </td>
-        <td><%= fin.base %></td>
-        <td><%= fin.height %></td>
-        <td><%= fin.description %></td>
-        <td><%= fin.customer_price %></td>
-        <td><%= fin.ballast_price %></td>
-        <td><%= link_to 'Show', fin %></td>
-        <td><%= link_to 'Edit', edit_fin_path(fin) %></td>
-        <td><%= link_to 'Destroy', fin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+       <div class="listing">
+        <center>
+        <%= link_to image_tag(fin.image.url(:thumb)), fin, class: "img-responsive"%>
+        <%= link_to fin.name, fin %> // <%= link_to fin.model, fin %><br/> 
+        <p><%= number_to_currency(fin.customer_price) %><p>
+       
+        <% if user_signed_in? %>
+        <p>Ballast Price: <%= number_to_currency(fin.ballast_price) %></p>
+        <%= link_to 'Edit', edit_fin_path(fin) %> |
+        <%= link_to 'Delete', fin, method: :delete, data: { confirm: 'Are you sure?' } %> 
+        <% end %>
+       </center>
+       </div><!-- end listing -->
     <% end %>
-  </tbody>
-</table>
+</center>
+    </div><!-- end md 12 -->    
+</div><!-- end row -->
 
-<br>
+                
 
-<%= link_to new_fin_path do %><i class="fa fa-square-o"></i>&nbsp; ADD A NEW FIN <% end %>
+
