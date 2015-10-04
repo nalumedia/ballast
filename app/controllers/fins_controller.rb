@@ -42,6 +42,6 @@ class FinsController < ApplicationController
     end
 
     def fin_params
-      params.require(:fin).permit(:name, :type, :base, :height, :description, :customer_price, :ballast_price)
+      params.require(:fin).permit(:name, :model, :base, :height, :description, :customer_price, :ballast_price)
     end
 end

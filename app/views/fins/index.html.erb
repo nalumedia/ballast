@@ -4,7 +4,6 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Type</th>
       <th>Base</th>
       <th>Height</th>
       <th>Description</th>
@@ -17,8 +16,7 @@
   <tbody>
     <% @fins.each do |fin| %>
       <tr>
-        <td><%= fin.name %></td>
-        <td><%= fin.type %></td>
+        <td><%= fin.name %> // <%= fin.model %></td>
         <td><%= fin.base %></td>
         <td><%= fin.height %></td>
         <td><%= fin.description %></td>
