@@ -13,7 +13,9 @@
 
 <div class="row">
   <div class="col-md-12">
+    <center>
     <%= image_tag @fin.image.url(:medium), class: "img-responsive" %>
+    <center>
 </div><!-- end md 12 -->
 </div><!-- end row -->
  
@@ -34,14 +36,16 @@
   </div><!-- end md 12 -->
 </div><!-- end row -->
 
+<!-- 
 <div class="row">
   <div class="col-md-12 text-right">
     <p>
       <%= number_to_currency(@fin.customer_price) %>
     </p>
-  </div><!-- end md 12 -->
-</div><!-- end row -->
-
+  </div> 
+</div>
+-->
+<!-- 
 <div class="row">
   <div class="col-md-12 text-right">
       <%= form_tag charges_path, id: 'chargeForm' do %>
@@ -70,7 +74,7 @@
                   </script>
                 <% end %>
 
-  </div><!-- end md 12 -->
+  </div> -->
 </div><!-- end row -->
 
 

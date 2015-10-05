@@ -18,36 +18,46 @@
 
 
 <div class="container">
-
-    <div class="row">
-          <div class="col-md-12 text-center">
-            <center>
-            <%= link_to image_tag("https://s3.amazonaws.com/ballast/images/ballastlogo.png", class: "img-responsive"), root_path %>
-          </center>
-    
-          </div><!-- end md 12 -->
-    </div><!-- end row -->
-
-
+<div class="row">
+  <div class="col-md-12 text-right" id="headersocial">
+    <% if user_signed_in? %>
+    <%= link_to destroy_user_session_path, method: :delete do %>
+    <i class="fa fa-toggle-off"></i>&nbsp;  Logout   &nbsp; 
+    <% end %>
+    <% else %>
+    <%=  link_to new_user_session_path do %>
+    <i class="fa fa-toggle-on"></i>&nbsp; Sign In <% end %> &nbsp; 
+    <% end %>
+  </div><!-- end md 12 -->
+</div><!-- end row -->
 
 <div class="row">
-      <div class="col-md-12 text-center" id="headernav">
-      <% if user_signed_in? %>  
-      <%= link_to "ORDERS", delivertos_path %> |
-      <%= link_to "HARWDARE", pages_paymentpage_path %> | <%= link_to "BLOG", blogs_path %> | <%= link_to "MEDIA", '#' %> | <%= link_to "FINS", fins_path %>
-
-      <% else %>
+  <div class="col-md-6 text-left">
+    <%= link_to image_tag("https://s3.amazonaws.com/ballast/images/ballastlogo.png", class: "img-responsive"), root_path %>
+  </div><!-- end md 6 -->
+  <div class="col-md-6 text-right" id="navigation">
+      
+      <%= link_to "OUR STORY", about_path %> |
+      <%= link_to "FINS", fins_path %>
+      |
+      <%= link_to "CONTACT", new_contact_path %>
       <!-- not logged in content -->
-      <% end %>
-      </div><!-- end md 12 -->
+  </div><!-- end md 6 -->
 </div><!-- end row -->
+
+<% if user_signed_in? %>  
+  <div class="row">
+    <div class="col-md-12 text-left">
+        <%= link_to "ORDERS", delivertos_path %> |
+        <%= link_to "CONTACTS", contacts_path %> <!-- | <%= link_to "BLOG", blogs_path %> | --> 
+    </div><!-- end md 12 -->
+  </div><!-- end row -->
+<% end %>
+
 
 <div class="row">
         <div class="col-md-12" id="main">
         <!-- end header -->
-
-
-
         <%= yield %>
         <!-- begin footer -->
         </div><!-- end md 12 -->    
@@ -65,30 +75,18 @@
 <div class="row">
     <div class="col-md-4"></div><!-- end md 4 -->
     <div class="col-md-4 text-center" id="footernav">
-       <% if user_signed_in? %>
-            <%= link_to destroy_user_session_path, method: :delete do %>
-            &nbsp; LOGOUT &nbsp;                            
-            <% end %>
-      <% else %>
-      <%=  link_to new_user_session_path do %>
-      &nbsp; LOGIN 
-      <% end %> &nbsp; 
-      <% end %>
-      |
-      <%= link_to "OUR STORY", about_path %>
-      |
-      <%= link_to "CONTACT", new_contact_path %>
- 
+       
       </div><!-- end md 4 -->
       <div class="col-md-4"></div><!-- end md 4 -->
 </div><!-- end row -->
 
 <div class="row">
-      <div class="col-md-4"></div><!-- end md 4 -->
-      <div class="col-md-4 text-center" id="footer">
+      <div class="col-md-6 text-left" id="footer">
       &copy; 2015 Ballast Hardware
       </div><!-- end md 4 -->
-      <div class="col-md-4"></div><!-- end md 4 -->
+      <div class="col-md-6 text-right">
+        <%= link_to "https://instagram.com/ballasthardware", target: "_blank" do %><i class="fa fa-instagram"></i><% end %>
+      </div><!-- end md 4 -->
 </div><!-- end row -->
 
 </div><!-- end container -->

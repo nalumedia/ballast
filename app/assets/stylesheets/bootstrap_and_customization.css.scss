@@ -15,7 +15,7 @@
 body {
 	font-family: 'Inconsolata';
 	font-size: 18px;
-	padding-top: 20px;
+	padding-top: 5px;
 }
 
 a:link {
@@ -33,11 +33,12 @@ a:hover {
 
 	}
 
-	#headernav {
+#headernav {
 		padding-top: 20px;
 		font-size: 22px;
 	}
-		#main {
+
+#main {
 		padding-top: 20px;
 		font-size: 22px;
 	}
@@ -57,6 +58,15 @@ color: #7f8c8d;
 padding-top: 20px; 
 font-size: 10px;
 color: #7f8c8d;
+}
+
+#headersocial {
+  font-size: 12px; 
+}
+
+#navigation {
+  padding-top: 18px;
+  font-size: 22px;
 }
 
 #red {
