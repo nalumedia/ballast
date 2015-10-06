@@ -1,5 +1,10 @@
-<p id="notice"><%= notice %></p>
+<p>
+  <center>Thank you for contacting Ballast. We will be in touch.
+  </center>
+  </p>
 
+
+<% if user_signed_in? %>
 <p>
   <strong>Contact name:</strong>
   <%= @contact.contact_name %>
@@ -20,5 +25,4 @@
   <%= @contact.contact_status %>
 </p>
 
-<%= link_to 'Edit', edit_contact_path(@contact) %> |
-<%= link_to 'Back', contacts_path %>
+<% end %>

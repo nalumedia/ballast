@@ -12,16 +12,13 @@
   <% end %>
 
   <div class="form-group">
-    <%= f.label "Name" %><br>
-    <%= f.text_field :contact_name, class: "form-control" %>
+    <%= f.text_field :contact_name, :placeholder => "Your Name", class: "form-control" %>
   </div>
   <div class="Email">
-    <%= f.label :contact_email %><br>
-    <%= f.text_field :contact_email, class: "form-control"  %>
-  </div>
+    <%= f.text_field :contact_email, :placeholder => "Your Email", class: "form-control"  %>
+  </div><br />
   <div class="form-group">
-    <%= f.label "What can we do for you?" %><br>
-    <%= f.text_area :contact_description, class: "form-control"  %>
+    <%= f.text_area :contact_description, :placeholder => "What can we do for you?", class: "form-control"  %>
   </div>
   <% if user_signed_in? %>
   <div class="form-group">
@@ -30,6 +27,6 @@
   </div>
   <% end %>
   <div class="actions">
-    <%= f.submit "CONTACT", class: "btn btn-default" %>
+    <%= f.submit "CONTACT BALLAST", class: "btn btn-default" %>
   </div>
 <% end %>
