@@ -1,12 +1,19 @@
-<h1>Listing contacts</h1>
+<% if user_signed_in? %>
 
-<table>
+
+
+<h1>// CONTACTS </h1>
+
+<p> + <%= link_to 'Add New Contact', new_contact_path %> </p>
+
+<table class="table table-striped">
   <thead>
     <tr>
-      <th>Contact name</th>
-      <th>Contact email</th>
-      <th>Contact description</th>
-      <th>Contact status</th>
+      <th>Created</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Description</th>
+      <th>Status</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,18 +21,31 @@
   <tbody>
     <% @contacts.each do |contact| %>
       <tr>
+        <td><%= contact.created_at.to_formatted_s(:short) %></td>
         <td><%= contact.contact_name %></td>
         <td><%= contact.contact_email %></td>
         <td><%= contact.contact_description %></td>
-        <td><%= contact.contact_status %></td>
-        <td><%= link_to 'Show', contact %></td>
-        <td><%= link_to 'Edit', edit_contact_path(contact) %></td>
-        <td><%= link_to 'Destroy', contact, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+          <% if contact.contact_status.blank? %>
+          NEW
+          <% else %>
+          <%= contact.contact_status %>
+          <% end %>
+          </td>
+        <td><%= link_to 'View', contact %> |
+        <%= link_to 'Edit', edit_contact_path(contact) %> |
+        <%= link_to 'Delete', contact, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
+<% else %>
+<center>
+<p>
+YOU DO NOT HAVE PERMISSION TO ENTER THIS AREA</p>
+</center>
 
-<%= link_to 'New Contact', new_contact_path %>
+<% end %>
+
+
