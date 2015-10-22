@@ -1,11 +1,11 @@
 
-
 <% if user_signed_in? %>
 <%= link_to new_fin_path do %><i class="fa fa-square-o"></i>&nbsp; ADD A NEW FIN <% end %> <br />
 <% end %>
 <div class="row">
-    <div class="col-md-12">
-<center>
+  
+    <div class="col-md-12 text-center">
+
     <% @fins.each do |fin| %>
        <div class="listing">
         <center>
@@ -21,8 +21,9 @@
        </center>
        </div><!-- end listing -->
     <% end %>
-</center>
-    </div><!-- end md 12 -->    
+
+    </div><!-- end md 10 -->   
+
 </div><!-- end row -->
 
                 
